@@ -35,7 +35,9 @@ class RunnerTests(unittest.TestCase):
         with mock.patch.dict(os.environ, {"PRINT3D_TOOLS": str(env_config)}):
             values = runner.load_config(explicit)
         self.assertEqual(values["python"], sys.executable)
-        self.assertEqual(Path(values["blender"]), self.root / "bin" / "blender")
+        # Windows CI may expose TEMP with an 8.3 alias (RUNNER~1); compare the
+        # resolved destination, as the config loader resolves its base path.
+        self.assertEqual(Path(values["blender"]).resolve(), (self.root / "bin" / "blender").resolve())
         self.assertIsNone(values["openscad"])
 
     def test_environment_then_local_config_and_discovery(self):
