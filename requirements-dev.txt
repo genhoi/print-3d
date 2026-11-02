@@ -1,0 +1,2 @@
+-r requirements-cad.txt
+PyYAML>=6,<7

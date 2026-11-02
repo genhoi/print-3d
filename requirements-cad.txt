@@ -1,0 +1,2 @@
+-r requirements.txt
+cadquery>=2.8,<2.9

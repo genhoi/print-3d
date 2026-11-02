@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.py[cod]
+scripts/tools.local.json
+outputs/
+*.blend1
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/

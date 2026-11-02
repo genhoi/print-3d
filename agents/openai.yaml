@@ -1,0 +1,3 @@
+interface:
+  display_name: "3D Printing"
+  short_description: "Model, inspect and export printable 3D parts"

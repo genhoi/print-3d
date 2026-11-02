@@ -1,0 +1,7 @@
+numpy>=2.2,<3
+trimesh>=5.2,<6
+manifold3d>=3.5.4,<4
+networkx>=3.4,<4
+lxml>=5,<7
+rtree>=1.4,<2
+Pillow>=11,<14
